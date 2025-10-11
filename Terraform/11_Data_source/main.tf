@@ -10,7 +10,7 @@
 
 #   filter {
 #     name   = "name"
-#     values = ["amzn2-ami-kernel*"]
+#     values = ["al2023-ami-2023.9.20250929.0-kernel-6.1-x86_64*"]
 #   }
 # }
 
@@ -23,6 +23,7 @@
 #     ami = data.aws_ami.app_ami.id
 #    instance_type = "t2.micro"
 # }
+
 
 
 
