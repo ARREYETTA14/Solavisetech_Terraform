@@ -11,7 +11,7 @@ resource "aws_vpc" "vpc" {
 # Create Public Subnet
 
 resource "aws_subnet" "public" {
-  vpc_id     = aws_vpc.main.id
+  vpc_id     = aws_vpc.vpc.id
   cidr_block = var.publicsubnet_cidr
 
   tags = {
@@ -23,7 +23,7 @@ resource "aws_subnet" "public" {
 # Create Private Subnet
 
 resource "aws_subnet" "private" {
-  vpc_id     = aws_vpc.main.id
+  vpc_id     = aws_vpc.vpc.id
   cidr_block = var.privatesubnet_cidr
 
   tags = {
