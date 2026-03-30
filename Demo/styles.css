@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ perfect vertical centering */
+}
+
+/* Main container */
+.container {
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #94a3b8;
+}
+
+/* Cards section */
+.status {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* Card styling */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.online {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+/* Footer text */
+.footer-text {
+  font-size: 1rem;
+  color: #cbd5f5;
+}
