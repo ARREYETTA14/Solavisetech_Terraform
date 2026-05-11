@@ -1,0 +1,20 @@
+- You have created a resource through terraform
+- User(s) made changed on the resource both infra and inside server
+
+There are two ways you can handle this 
+- Delete and recreate the resource as it originally was (tainting)
+- Import the changes to terraform
+
+
+* Tainting
+- you created an ec2 instance with instance type t2.micro
+- at the console, it was changed to t2.medium
+- when you run "terrafrom taint" it takes the changes made in console and marks as tainted.
+- when you run "terraform plan & apply", terraform destroys all the resources that were tainted 
+  then it recreated the initial resource with t2.micro.
+
+* Import
+- In case we wish to keep the changes, we can import the changes from console such that, it upates
+  the statefile. "terraform refresh"
+- The terraform statefile will have t2.medium and now we just have to update backend code
+  t2.medium.
