@@ -10,6 +10,7 @@
 #   instance_type = "t3.micro"
 #   subnet_id = module.my_vpc_module.public_subnet_id
 #   tags = {
+      Name = "Demo_Instance"
 #     Environment = "Test_Ec2"
 #   }
 # }
